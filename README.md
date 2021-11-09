@@ -1,2 +1,0 @@
-# alwanfa.github.io
-myPersonalWebsite
