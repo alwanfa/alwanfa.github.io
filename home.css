@@ -44,6 +44,10 @@
         bottom: 0;
     }
     
+    .welcome-page .footer {
+        padding-bottom: 20px;
+    }
+    
     .navbar ul {
         width: 350px;
         position: relative;
@@ -212,18 +216,23 @@
         top: -15%;
         /* top: 15%; */
         width: 100%;
-        left: 0%;
         opacity: 0;
     }
     
-    .resume-section .resume {
-        width: 80%;
-        margin: auto;
+    .resume-section .resume h2 {
+        width: 100%;
+        padding-left: 100px;
     }
     
     .resume-section .work-experience {
+        width: 80%;
         display: flex;
+        margin: auto;
         padding-top: 30px;
+    }
+    
+    .resume-section .work-experience h3 {
+        width: 300px;
     }
     
     .resume-section .work-experience .column .isi-we {
@@ -231,38 +240,33 @@
         display: flex;
     }
     
-    .isi-we .timeline {
-        width: 200px;
-        padding-left: 30px;
+    .isi-we .timeline p {
+        width: 170px;
     }
     
-    .resume-section .work-experience h3 {
-        width: 265px;
-    }
-    
-    .isi-we .work {
-        padding-left: 50px;
-    }
+    .isi-we .work {}
     
     .resume-section .education {
         display: flex;
+        width: 80%;
+        margin: auto;
     }
     
     .resume-section .education .column .isi-education {
         padding-bottom: 40px;
+        display: flex;
     }
     
     .resume-section .education h3 {
-        width: 200px;
+        width: 300px;
     }
     
     .isi-education {
         display: flex;
     }
     
-    .isi-education .timeline {
-        width: 200px;
-        padding-left: 30px;
+    .isi-education .timeline p {
+        width: 170px;
     }
     
     hr {
