@@ -41,6 +41,7 @@
         width: 100%;
         opacity: 1;
         transition: 0.5s;
+        bottom: 0;
     }
     
     .navbar ul {
@@ -85,7 +86,6 @@
         font-size: 48px;
     }
     /* Isi */
-    
     
     .home .isi {
         position: relative;
@@ -274,8 +274,10 @@
     .footer {
         padding-top: 20px;
         width: 90%;
+        height: 20%;
         position: sticky;
         margin: auto;
+        box-sizing: border-box;
         display: flex;
         justify-content: space-between;
     }
@@ -286,7 +288,6 @@
     }
     
     .footer .phone p {
-        padding-top: px;
         font-family: "Poppins";
         font-size: 12px;
         font-weight: 300;
