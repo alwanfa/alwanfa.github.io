@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/46a4d4bd78.js" crossorigin="anonymous"></script>
     <script src="home.js"></script>
@@ -13,16 +15,25 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <h1>Wan <span>Dev</span></h1>
-        <div class="nav-button">
-            <ul>
+    <div class="navbar d-flex justify-content-around position-fixed align-items-center pt-4 shadow">
+        <a href="" onclick="moveToHomePage()" class="text-decoration-none">
+            <h1>Wan <span>Dev</span></h1>
+        </a>
+        <div class="nav-button" id="list-link">
+            <ul class="list-unstyled">
                 <li><a href="#home" id="home-button" onclick="moveToHomePage()">Home</a></li>
                 <li><a href="#" id="resume-button" onclick="moveToResume()">Resume</a></li>
-                <li><a href="#project" onclick="moveToProject()">Project</a></li>
+                <li><a href="#" onclick="moveToProject()">Project</a></li>
                 <li>
-                    <a href="#contact" onclick="moveToContact()">Contact</a></li>
+                    <a href="#" onclick="moveToContact()">Contact</a></li>
             </ul>
+        </div>
+        <div class="menu-toggle" onclick="hamburgerMenu()">
+            <div class="menu">
+                <span id="child1"></span>
+                <span id="child2"></span>
+                <span id="child3"></span>
+            </div>
         </div>
     </div>
     <div class="welcome-page " id="homepage">
@@ -31,11 +42,11 @@
                 <div class="foto ">
                     <img src="img/bahan.png " alt=" ">
                 </div>
-                <div class="profile ">
+                <div class="profile">
                     <h2>Hello I am <span>Alwan</span></h2>
-                    <span class="type "></span>
+                    <span class="type"></span>
                     <p>a bit about me I'm a college student majoring in information systems at Brawijaya University. I made this website for fulfil my task in subject Basic User Interface Design. I have interest to learn more about web development</p>
-                    <div class="button ">
+                    <div class="button">
                         <div class="resume" onclick="moveToResume() "><span>Resume</span></div>
                         <div class="project " onclick="moveToProject() "><span>Project</span></div>
                         <div class="contact " onclick="moveToContact()"><span>Contact</span></div>
@@ -122,20 +133,20 @@
                     </div>
                     <div class="isi-education ">
                         <div class="timeline ">
-                            <p>2020 - Present</p>
+                            <p>2017 - 2020</p>
                         </div>
                         <div class="institusi ">
-                            <h4>Brawijaya University</h4>
-                            <p>Bachelor degree in majority Information System, Faculty of Computer.</p>
+                            <h4>SMAN 2 Tasikmalaya</h4>
+                            <p>Math & Science Major</p>
                         </div>
                     </div>
                     <div class="isi-education ">
                         <div class="timeline ">
-                            <p>2020 - Present</p>
+                            <p>2014 - 2017</p>
                         </div>
                         <div class="institusi ">
-                            <h4>Brawijaya University</h4>
-                            <p>Bachelor degree in majority Information System, Faculty of Computer.</p>
+                            <h4>SMPN 16 Tasikmalaya</h4>
+                            <p></p>
                         </div>
                     </div>
 
@@ -171,21 +182,21 @@
         <h2>Project</h2>
         <div class="grid ">
             <div class="grid-item text ">
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, voluptatem!</p>
+                <h3>Photography</h3>
+                <p>A masterpiece about nature</p>
             </div>
             <div class="grid-item img ">
                 <img src="img/gambar1.jpg " alt=" ">
             </div>
             <div class="grid-item text ">
-                <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, molestiae.</p>
+                <h3>Photography 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum nesciunt hic maxime! Vitae dolorum officiis eum omnis delectus iusto.</p>
             </div>
             <div class="grid-item img ">
                 <img src="img/gambar2.jpg " alt=" ">
             </div>
             <div class="grid-item text ">
-                <h3>Project 3</h3>
+                <h3>Photography 3</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta.</p>
             </div>
             <div class="grid-item img ">
@@ -266,12 +277,13 @@
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="typed.js "></script>
 
     <script>
         var typed3 = new Typed('.type', {
-            strings: ['College Student', 'Developer', 'Designer', 'Pengangguran', 'Pengacara'],
+            strings: ['College Student', 'Developer', 'Designer', 'Amin'],
             typeSpeed: 60,
             backSpeed: 60,
             // this is a default
