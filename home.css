@@ -2,79 +2,14 @@
     
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
     * {
-        padding: 0;
-        margin: 0;
         font-family: "Poppins"
     }
     /* navbar */
     
-    body {
-        min-height: 100%;
-        background-color: white;
-    }
-    
-    .home {
-        width: 100%;
-        padding-bottom: 25%;
-        background: url("img/bg.jpg");
-        background-size: cover;
-        position: relative;
-        display: flex;
-    }
-    
     .navbar {
-        display: flex;
-        position: absolute;
-        justify-content: space-around;
-        align-items: center;
         width: 100%;
-        padding-top: 20px;
-        margin: auto;
-        z-index: 2;
+        z-index: 3;
         background-color: white;
-        box-shadow: 0px 4px 15px gray;
-        z-index: 3;
-    }
-    
-    .welcome-page {
-        position: absolute;
-        width: 100%;
-        opacity: 1;
-        transition: 0.5s;
-        bottom: 0;
-    }
-    
-    .welcome-page .footer {
-        padding-bottom: 20px;
-    }
-    
-    .navbar ul {
-        width: 350px;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        z-index: 3;
-    }
-    
-    .navbar ul li a {
-        text-decoration: none;
-        color: purple;
-        font-weight: 500;
-    }
-    
-    .navbar .nav-button ul li a::after {
-        content: '';
-        width: 0%;
-        height: 3px;
-        background-color: purple;
-        display: block;
-        margin: auto;
-        transition: 0.5s;
-    }
-    
-    .navbar .nav-button ul li a:hover::after {
-        width: 100%;
     }
     
     .navbar h1 {
@@ -89,15 +24,97 @@
         font-weight: 700;
         font-size: 48px;
     }
-    /* Isi */
+    
+    .navbar ul li a {
+        text-decoration: none;
+        color: purple;
+        font-weight: 500;
+    }
+    
+    .navbar .nav-button {
+        position: absolute;
+        right: -100%;
+        top: 100%;
+        width: 300px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 0px 2px 3px gray;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    .navbar .nav-button ul {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .navbar .menu-toggle {
+        position: relative;
+        height: 20px;
+        width: 30px;
+    }
+    
+    .navbar .menu-toggle .menu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    .navbar .menu-toggle span {
+        display: block;
+        height: 4px;
+        width: 30px;
+        background: black;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    /* end of navbar */
+    /* Home */
+    
+    .welcome-page {
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        opacity: 1;
+        transition: 0.5s;
+        bottom: 0;
+    }
+    
+    .home {
+        width: 100%;
+        position: relative;
+        background: url("img/bg1.jpg");
+        min-height: 200%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+    }
+    
+    .home::after {
+        content: "";
+        background: rgba(170, 20, 240, 0.8);
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 82%;
+        z-index: 1;
+    }
     
     .home .isi {
         position: relative;
-        top: 300px;
-        z-index: 2;
-        display: flex;
-        transition: 0.1s;
         margin: auto;
+        width: 60%;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: auto;
+        transition: 0.1s;
+        box-sizing: border-box;
     }
     
     .home .isi img {
@@ -106,10 +123,14 @@
         -webkit-filter: grayscale(100%);
     }
     
+    .home .isi .foto {
+        margin: auto;
+    }
+    
     .home .isi .profile {
-        padding-left: 60px;
+        margin: 0px auto;
         color: white;
-        width: 400px;
+        width: 100%;
     }
     
     .home .isi .profile h2 {
@@ -140,12 +161,12 @@
         font-size: 18px;
         letter-spacing: 0px;
         text-align: justify;
-        font-weight: 20;
+        font-weight: 200;
         text-shadow: 4px 3px 5px purple;
     }
     
     .home .isi .profile .button {
-        width: 405px;
+        width: px;
         padding-top: 20px;
         display: flex;
         justify-content: space-between;
@@ -199,24 +220,16 @@
     .home .isi .profile .button .contact:hover {
         background-color: transparent;
     }
-    
-    .home::after {
-        content: "";
-        background: rgba(170, 20, 240, 0.8);
-        position: absolute;
-        top: 0%;
-        width: 100%;
-        height: 100%;
-        opacity: 82%;
-        z-index: 1;
-    }
+    /* Resume */
     
     .resume-section {
         position: absolute;
-        top: -15%;
+        top: -60%;
         /* top: 15%; */
         width: 100%;
         opacity: 0;
+        overflow: hidden;
+        transition: 00.5s;
     }
     
     .resume-section .resume h2 {
@@ -276,8 +289,8 @@
     .footer {
         padding-top: 20px;
         width: 90%;
-        height: 20%;
-        position: sticky;
+        height: 10%;
+        position: relative;
         margin: auto;
         box-sizing: border-box;
         display: flex;
@@ -317,6 +330,7 @@
     .footer .sosmed i {
         font-size: 18px;
     }
+    /* project */
     
     .grid {
         padding-top: 60px;
@@ -334,7 +348,7 @@
         position: absolute;
         width: 100%;
         top: -60%;
-        /* top: 15%; */
+        top: 15%;
         left: 0%;
         opacity: 0;
         transition: 0.5s;
@@ -356,6 +370,7 @@
         top: 15%;
         opacity: 0;
         transition: 0.5s;
+        overflow: hidden;
     }
     
     .contact-section .contact {
@@ -381,4 +396,237 @@
     .contact-section .contact .column .sm i {
         font-size: 32px;
         color: purple;
+    }
+    
+    @media(min-width:992px) {
+        /* navbar */
+        .navbar {
+            z-index: 3;
+        }
+        .navbar .nav-button {
+            position: relative;
+            height: fit-content;
+            width: fit-content;
+            right: 0%;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        .navbar .menu-toggle {
+            position: absolute;
+            top: -30%;
+        }
+        .navbar .nav-button ul {
+            width: 350px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            z-index: 3;
+        }
+        .navbar .nav-button ul li a::after {
+            content: '';
+            width: 0%;
+            height: 3px;
+            background-color: purple;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .navbar .nav-button ul li a:hover::after {
+            width: 100%;
+        }
+        .welcome-page .footer {
+            padding-bottom: 20px;
+        }
+        /* Isi */
+        body {
+            background-color: white;
+        }
+        .home {
+            width: auto;
+            padding-bottom: 80px;
+            background: url("img/bg1.jpg");
+            min-height: 0%;
+            background-size: cover;
+            position: relative;
+            display: flex;
+        }
+        .welcome-page {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            opacity: 1;
+            transition: 0.5s;
+            bottom: 0;
+        }
+        .welcome-page .footer {
+            padding-bottom: 20px;
+        }
+        .home .isi {
+            position: relative;
+            box-sizing: border-box;
+            padding-top: 10%;
+            width: 60%;
+            z-index: 2;
+            display: flex;
+            transition: 0.1s;
+            margin: 0px auto;
+            align-items: center;
+        }
+        .home .isi .profile {
+            padding-left: 50px;
+            margin: 0px auto;
+            color: white;
+            width: 500px;
+        }
+        /* end of home */
+        /* resume */
+        .resume-section {
+            position: absolute;
+            top: -60%;
+            /* top: 15%; */
+            width: 100%;
+            opacity: 0;
+            overflow: hidden;
+            transition: 00.5s;
+        }
+        .resume-section .resume h2 {
+            width: 100%;
+            padding-left: 100px;
+        }
+        .resume-section .work-experience {
+            width: 80%;
+            display: flex;
+            margin: auto;
+            padding-top: 30px;
+        }
+        .resume-section .work-experience h3 {
+            width: 300px;
+        }
+        .resume-section .work-experience .column .isi-we {
+            padding-bottom: 40px;
+            display: flex;
+        }
+        .isi-we .timeline p {
+            width: 170px;
+        }
+        .resume-section .education {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+        .resume-section .education .column .isi-education {
+            padding-bottom: 40px;
+            display: flex;
+        }
+        .resume-section .education h3 {
+            width: 300px;
+        }
+        .isi-education {
+            display: flex;
+        }
+        .isi-education .timeline p {
+            width: 170px;
+        }
+        hr {
+            width: 90%;
+            margin: auto;
+            background-color: gray;
+        }
+        .footer {
+            padding-top: 20px;
+            width: 90%;
+            height: 10%;
+            position: relative;
+            margin: auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer .phone span {
+            font-family: "poppins";
+            font-weight: bold;
+        }
+        .footer .phone p {
+            font-family: "Poppins";
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .footer .email span {
+            font-family: "poppins";
+            font-weight: bold;
+        }
+        .footer .email a {
+            padding-top: 10px;
+            text-decoration: none;
+            color: black;
+            font-family: "Poppins";
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .footer .sosmed span {
+            font-family: "poppins";
+            font-weight: bold;
+        }
+        .footer .sosmed i {
+            font-size: 18px;
+        }
+        .grid {
+            padding-top: 60px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 330px 330px;
+            grid-column-gap: 200px;
+            width: 80%;
+        }
+        .project-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: -60%;
+            top: 15%;
+            left: 0%;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .project-section .footer,
+        .project-section hr {
+            width: 90%;
+        }
+        .project-section .footer,
+        .resume-section .footer {
+            padding-bottom: 30px;
+        }
+        .contact-section {
+            width: 100%;
+            position: absolute;
+            top: 15%;
+            opacity: 0;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        .contact-section .contact {
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 80%;
+            grid-column-gap: 13px;
+            padding-left: 15%;
+            padding-bottom: 40px;
+        }
+        .contact-section .contact .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .contact-section h2 {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        .contact-section .contact .column .sm i {
+            font-size: 32px;
+            color: purple;
+        }
     }
